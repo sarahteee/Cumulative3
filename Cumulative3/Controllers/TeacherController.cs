@@ -109,9 +109,7 @@ namespace Cumulative3.Controllers
         /// receives a post request containing information about an existing teacher, with new values. sends this info to the api and redirects to show page of updated teacher
         /// </summary>
         /// <param name="id"> id of the teacher to update</param>
-        /// <param name="TeacherFName">teachers updated first name</param>
-        /// <param name="TeacherLName">teachers updated last name</param>
-        /// <param name="Salary">teachers updated salary</param>
+        /// <param name="UpdatedTeacher">teachers updated information</param>
         /// <returns>a dynamic webpage that gives current teacher info</returns>
         /// <example>
         /// POST : /Teacher/Update/1
@@ -125,7 +123,7 @@ namespace Cumulative3.Controllers
 
         [HttpPost]
 
-        public ActionResult Update(int id, string TeacherFName, string TeacherLName, string Salary)
+        public ActionResult Update(int id, Teacher UpdatedTeacher)
         {
             //confirm we recieve the information
             //Debug.WriteLine("the teacher id is "+id);
@@ -133,11 +131,6 @@ namespace Cumulative3.Controllers
             //Debug.WriteLine("the teachers last name is " + UpdatedTeacher.TeacherLName);
             //Debug.WriteLine("the teachers salary is " + UpdatedTeacher.Salary);
 
-            //update the teacher info
-            Teacher UpdatedTeacher = new Teacher();
-            UpdatedTeacher.TeacherFName = TeacherFName;
-            UpdatedTeacher.TeacherLName = TeacherLName;
-            UpdatedTeacher.Salary = Salary;
 
             TeacherDataController Controller = new TeacherDataController();
 

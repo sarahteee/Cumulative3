@@ -188,7 +188,7 @@ namespace Cumulative3.Controllers
         {
             //INSERT INTO teachers (teacherid, teacherfname, teacherlname, employeenumber, hiredate, salary) VALUES(0, 'Michael', 'Meyers', 'T123', '2023-10-31 00:00:00', 55.13);
 
-            MySqlConnection Conn = School.AccessDatabase();
+            MySqlConnection Conn = School.AccessDatabase();  
             Conn.Open();
             MySqlCommand CMD = Conn.CreateCommand();
 
@@ -251,7 +251,7 @@ namespace Cumulative3.Controllers
         ///</example>
         ///<return></return>
 
-        [HttpPost]
+        [HttpPost] 
         [Route("api/TeacherData/UpdateTeacher/{TeacherId}")]
         public void UpdateTeacher(int TeacherId, Teacher UpdatedTeacher)
         {
