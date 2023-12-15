@@ -1,0 +1,13 @@
+﻿@model Cumulative3.Models.Teacher
+@{
+    ViewBag.Title = "DeleteConfirm";
+}
+
+<h2>Are you sure you want to remove this teacher?</h2>
+
+<p><strong>Teacher Name: </strong> @Model.TeacherFName @Model.TeacherLName</p>
+
+<form action="/Teacher/Delete/@Model.TeacherId" method="POST">
+    <input type="submit" value="Confirm Delete" />
+</form>
+

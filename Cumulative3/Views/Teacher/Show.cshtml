@@ -1,0 +1,14 @@
+﻿@model Cumulative3.Models.Teacher
+@{
+    ViewBag.Title = "Show";
+}
+
+<h1>@Model.TeacherFName @Model.TeacherLName</h1>
+<p>Employee Number: @Model.EmployeeNumber</p>
+<p>Date of Hire: @Model.HireDate</p>
+<p>Salary: @Model.Salary</p>
+
+<a style="background-color:darkred; color:white;padding:8px 8px; text-decoration:none;" href="/Teacher/DeleteConfirm/@Model.TeacherId">Delete Teacher</a>
+<a style="background-color:darkgreen; color:white;padding:8px 8px; text-decoration:none;" href="/Teacher/Edit/@Model.TeacherId">Update</a>
+
+
